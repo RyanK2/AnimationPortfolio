@@ -349,7 +349,7 @@ html { font-family: 'Inter', sans-serif; }
     }
 
     .reveal-text{
-        max-width: 60%;
+        max-width: 75%;
         span { 
             display:inline-block;
             overflow:hidden;
@@ -391,7 +391,7 @@ html { font-family: 'Inter', sans-serif; }
         line-height: 1;
         font-weight: normal;
         }
-    }
+    
     
     @keyframes weight  {
     0% {
@@ -416,4 +416,28 @@ html { font-family: 'Inter', sans-serif; }
       font-variation-settings: "wght" 100, "wdth" 50,  "slnt" 0;
       }
     }
+
+}
+
+.scroll_section {
     
+    a {
+        color: white;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    .single_trigger {
+        transition: 0.5s ease-out;
+
+        &:hover {
+            border: 2px solid red;
+            transition: 0.3s ease-out;
+
+            a {
+                color: red;
+                transition: 0.3s ease-out;
+            }
+        }
+    }
+}

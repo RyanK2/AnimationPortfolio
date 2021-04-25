@@ -381,7 +381,7 @@ html {
 }
 
 .single19 .reveal-text {
-  max-width: 60%;
+  max-width: 75%;
 }
 
 .single19 .reveal-text span {
@@ -448,4 +448,24 @@ html {
   100% {
     font-variation-settings: "wght" 100, "wdth" 50,  "slnt" 0;
   }
+}
+
+.scroll_section a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.scroll_section .single_trigger {
+  transition: 0.5s ease-out;
+}
+
+.scroll_section .single_trigger:hover {
+  border: 2px solid red;
+  transition: 0.3s ease-out;
+}
+
+.scroll_section .single_trigger:hover a {
+  color: red;
+  transition: 0.3s ease-out;
 }
