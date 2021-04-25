@@ -11,14 +11,14 @@ h1, h2, p {
   text-align: center;
 }
 
-.button_section {
+.button_section, .svg_section, .text_section {
   padding-top: 2vw;
   padding-bottom: 2vw;
   margin: 5vw;
   border: 2px white dotted;
 }
 
-.button_animations {
+.button_animations, .svg_animations, .text_animations {
   margin-top: 5vw;
   display: flex;
   flex-wrap: wrap;
@@ -63,6 +63,11 @@ h1, h2, p {
   color: white;
   text-decoration: none;
   max-width: 80%;
+}
+
+.single_animation.single_fonts {
+  width: 40vw;
+  height: 400px;
 }
 
 .single_animation .single1 {
