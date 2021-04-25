@@ -1,3 +1,9 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
 .single_svgs {
     height: 400px;
 
@@ -302,3 +308,112 @@
         }
     }
 }
+
+.single19 {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    top: 150px;
+    left: 30%;
+
+    @media (min-width: 1300px) {
+        left: 20%;
+     }
+
+    @media (max-width: 1120px) {
+       left: 12%;
+    }
+
+    @media (max-width: 1020px) {
+        left: 20%;
+     }
+    
+    @media (max-width: 930px) {
+       left: 15%;
+    }
+
+    @media (max-width: 650px) {
+        left: 20%;
+     }
+
+     @media (max-width: 470px) {
+        left: 3vw;
+     }
+  
+    .container{
+        width: 600px;
+        padding: 10px;
+    }
+
+    .reveal-text{
+        max-width: 60%;
+        span { 
+            display:inline-block;
+            overflow:hidden;
+        }
+
+        @media (max-width: 650px) {
+            max-width: 200px;
+        }
+    }
+  
+    .l-word{
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
+        line-height: calc(3rem * 1.2);
+        display:inline-block;
+        transform:translateY(100%);
+        transition: all 0.2s ease-out;
+        
+        &.reveal {
+            transform:translateY(0);
+        }
+    }
+}
+
+.single20 {
+    text-rendering: optimizeSpeed;
+    margin: 0 auto;
+    text-align: center;
+    //overflow: hidden;
+    margin-top: 150px;
+      
+    p {
+        animation: weight infinite;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        font-size: 5vw;
+        color: lightblue;
+        margin: -24px;
+        line-height: 1;
+        font-weight: normal;
+        }
+    }
+    
+    @keyframes weight  {
+    0% {
+      font-variation-settings: "wght" 100, "wdth" 50, "slnt" 0 ;
+      opacity: 1;
+      transition: 0.4s ease;
+      }
+    25% {
+      font-variation-settings: "wght" 900, "wdth" 50, "slnt" 10;
+      opacity: 0;
+      transition: 0.4s ease;
+      }
+    50% {
+      font-variation-settings: "wght" 900, "wdth" 200, "slnt" 10;
+      opacity: 1;
+      transition: 0.4s ease;
+      }
+    75% {
+      font-variation-settings: "wght" 100, "wdth" 200, "slnt" 10; 
+      }
+    100% {
+      font-variation-settings: "wght" 100, "wdth" 50,  "slnt" 0;
+      }
+    }
+    

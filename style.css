@@ -11,14 +11,14 @@ h1, h2, p {
   text-align: center;
 }
 
-.button_section, .svg_section, .text_section {
+.button_section, .svg_section, .text_section, .scroll_section {
   padding-top: 2vw;
   padding-bottom: 2vw;
   margin: 5vw;
   border: 2px white dotted;
 }
 
-.button_animations, .svg_animations, .text_animations {
+.button_animations, .svg_animations, .text_animations, .scroll_animations {
   margin-top: 5vw;
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +68,32 @@ h1, h2, p {
 .single_animation.single_fonts {
   width: 40vw;
   height: 400px;
+}
+
+@media (max-width: 1020px) {
+  .single_animation.single_fonts {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .single_animation.single_fonts {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .single_animation.single_fonts {
+    width: 70vw;
+  }
+}
+
+.single_animation.single_trigger {
+  height: 150px;
+}
+
+.single_animation.single_trigger .title {
+  margin-top: 55px;
 }
 
 .single_animation .single1 {
