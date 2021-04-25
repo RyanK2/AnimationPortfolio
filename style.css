@@ -1,0 +1,654 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+body {
+  margin: 0;
+  background-color: black;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.button_section {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  margin: 5vw;
+  border: 2px white dotted;
+}
+
+.button_animations {
+  margin-top: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single_animation {
+  border: 2px solid white;
+  width: 25vw;
+  height: 300px;
+  margin: 10px;
+}
+
+@media (max-width: 1020px) {
+  .single_animation {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .single_animation {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .single_animation {
+    width: 70vw;
+  }
+}
+
+.single_animation .title {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+.single_animation .title a {
+  color: white;
+  text-decoration: none;
+  max-width: 80%;
+}
+
+.single_animation .single1 {
+  width: 70%;
+  position: relative;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.single_animation .single1 .link {
+  text-decoration: none;
+  color: white;
+}
+
+.single_animation .single1 .link .button_slide {
+  border-radius: 0px;
+  padding: 18px 36px;
+  background-color: grey;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.5s;
+  border: 2px white solid;
+}
+
+.single_animation .single1 .link .slide_right:hover {
+  box-shadow: inset 400px 0 0 0 black;
+}
+
+.single_animation .single2 {
+  position: relative;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.single_animation .single2 .container {
+  cursor: pointer;
+  transform: scale(1);
+  margin: 20px auto 50px auto;
+  display: block;
+  width: 80px;
+}
+
+.single_animation .single2 .container .cB-outer {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 30px;
+  background: #ff6454;
+  border-radius: 20px;
+}
+
+.single_animation .single2 .container .cB-outer .cB-inner {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #c0392b;
+  border-radius: 50%;
+  top: -10px;
+  box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.single_animation .single2 .cB-inner {
+  transform: translateX(0px);
+}
+
+.single_animation .single2 .cB-outer, .single_animation .single2 .cB-inner {
+  transition: 0.3s all cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.single_animation .single2 input[type="checkbox"].cB:checked + .cB-outer {
+  background: #2ecc71;
+}
+
+.single_animation .single2 input[type="checkbox"].cB:checked + .cB-outer .cB-inner {
+  background: #27ae60;
+  transform: translateX(30px);
+  box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.single_animation .cB {
+  display: none;
+}
+
+.single_animation .single3 {
+  margin: 0 auto;
+  top: 30%;
+  position: relative;
+  padding: 0 1rem;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+
+.single_animation .single3 .btn {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14pt;
+  width: 11vw;
+  height: 50px;
+  position: relative;
+  color: #777;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.single_animation .single3 .btn span {
+  width: 11vw;
+  height: 50px;
+  display: inline-block;
+  padding: 0.6vw 0vw;
+  margin-left: -0.2vw;
+}
+
+.single_animation .single3 .btn:before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0;
+  width: 25%;
+  height: 0%;
+  background-color: purple;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.single_animation .single3 .btn span:before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  width: 25%;
+  height: 0%;
+  background-color: purple;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.single_animation .single3 .btn:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 25%;
+  height: 0%;
+  background-color: purple;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.single_animation .single3 .btn span:after {
+  content: "";
+  position: absolute;
+  left: 75%;
+  bottom: 0;
+  width: 25%;
+  height: 0%;
+  background-color: purple;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.single_animation .single3 .btn:hover {
+  color: #f1f1f1;
+  border-color: purple;
+}
+
+.single_animation .single3 .btn:hover:before, .single_animation .single3 .btn:hover:after, .single_animation .single3 .btn span:hover:before, .single_animation .single3 .btn span:hover:after {
+  height: 100%;
+}
+
+.single_animation .single3 .btn:active {
+  color: #333;
+  background-color: purple;
+}
+
+.single_animation .single3 .btn:active:before, .single_animation .single3 .btn:active:after, .single_animation .single3 .btn span:hover:before, .single_animation .single3 .btn span:hover:after {
+  background-color: purple;
+}
+
+.single_animation .single3 .btn:focus {
+  outline: none;
+}
+
+.single_animation .single4 {
+  background-color: black;
+  width: 100%;
+  max-width: 15vw;
+  top: 20%;
+  position: relative;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.single_animation .single4 *:before,
+.single_animation .single4 *:after {
+  z-index: -1;
+}
+
+.single_animation .single4 span {
+  -webkit-transition: none;
+  transition: none;
+}
+
+@media (min-width: 600px) {
+  .single_animation .single4 .wrap {
+    width: 100%;
+    float: left;
+  }
+}
+
+.single_animation .single4 a {
+  text-decoration: none;
+  line-height: 80px;
+}
+
+.single_animation .single4 .btn-1 {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+  max-width: 250px;
+  margin: 1rem auto;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  position: relative;
+  color: white;
+}
+
+.single_animation .single4 .btn-1:before, .single_animation .single4 .btn-1:after {
+  position: absolute;
+  top: 50%;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.single_animation .single4 .btn-1:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+
+.single_animation .single4 .btn-1:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+
+.single_animation .single4 .btn-1:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.single_animation .single4 .btn-1:hover:before {
+  animation: criss-cross-left 0.8s both;
+  animation-direction: alternate;
+}
+
+.single_animation .single4 .btn-1:hover:after {
+  animation: criss-cross-right 0.8s both;
+  animation-direction: alternate;
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+.single_animation .single5 {
+  position: relative;
+  top: 40%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: sans-serif;
+}
+
+.single_animation .single5 a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-decoration: none;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  padding: 30px 60px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.single_animation .single5 a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: 0.4s ease-in-out;
+}
+
+.single_animation .single5 a:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.single_animation .single5 a span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, white, grey);
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.single_animation .single5 a span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, white, grey);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.single_animation .single5 a span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, white, grey);
+  animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.single_animation .single5 a span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, white, grey);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.single_animation .single6 {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.single_animation .single6 .btn {
+  position: relative;
+  width: 220px;
+  height: 65px;
+}
+
+.single_animation .single6 .btn::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: -4px;
+  right: 5px;
+  background-color: rgba(50, 50, 50, 0.2);
+  border-radius: 12px;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.single_animation .single6 .btn__link {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  color: #323232;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.single_animation .single6 .btn__link::before {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 190px;
+  background-color: lightblue;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 250ms;
+  z-index: -1;
+}
+
+.single_animation .single6 .btn__link:hover::before {
+  transform: scale(1);
+}
+
+.single_animation .single6 .btn__link:hover .single_animation .single6 .btn__inner::before {
+  transform: translate(-50%, 0px);
+  transition-delay: 150ms;
+}
+
+.single_animation .single6 .btn__link:hover .single_animation .single6 .btn__inner span {
+  transform: translate(0, -17px);
+  transition-delay: 0ms;
+}
+
+.single_animation .single6 .btn__inner {
+  position: relative;
+  overflow: hidden;
+}
+
+.single_animation .single6 .btn__inner::before {
+  content: attr(data-text);
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 17px);
+  transition: transform 250ms;
+}
+
+.single_animation .single6 .btn__inner span {
+  display: inline-block;
+  width: 100%;
+  transition: transform 250ms;
+  transition-delay: 100ms;
+}
+
+.single_animation .single7 {
+  margin: auto;
+  position: relative;
+  top: 30%;
+  left: 2%;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.single_animation .single7 .single7,
+.single_animation .single7 .button,
+.single_animation .single7 .sun,
+.single_animation .single7 .button span {
+  position: absolute;
+}
+
+.single_animation .single7 a:hover .sun {
+  bottom: 176px;
+  transition: all 1s ease-in-out;
+  box-shadow: 0px 0px 10px #ffdc2a;
+}
+
+.single_animation .single7 a:hover .button {
+  box-shadow: 0px 0px 36px #c80de0;
+  transition: all 1s ease-in-out;
+}
+
+.single_animation .single7 .sun {
+  width: 64px;
+  height: 64px;
+  left: 55px;
+  bottom: 136px;
+  background: linear-gradient(180deg, #ffdc2a 0%, #fb2182 41.54%);
+  box-shadow: 0px 0px 36px #ffdc2a;
+  z-index: 2;
+  border-radius: 65px;
+  transition: all 1s ease-in-out;
+}
+
+.single_animation .single7 .button {
+  width: 171px;
+  height: 65px;
+  background: #2c0055;
+  box-shadow: 0px 0px 16px #c80de0;
+  border-radius: 2px;
+  z-index: 3;
+  border: 2px solid;
+  transition: all 1s ease-in-out;
+  border-image: linear-gradient(#360154, #d442d5) 30;
+}
+
+.single_animation .single7 .button span {
+  text-align: center;
+  font-family: "Sacramento", cursive;
+  left: 36px;
+  font-size: 35px;
+  line-height: 70px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  background: -webkit-linear-gradient(#ffdc2a, #fb2182);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
